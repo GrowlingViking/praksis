@@ -9,14 +9,12 @@ class Task {
 	}
 }
 
-/* List all tasks in the database
-function listTasks() {
-	return db.all('SELECT * FROM tasks');
-};
-*/
-
 module.exports = {
 	listTasks: function() {
 		return db.all('SELECT * FROM tasks');
+	},
+
+	removeTask: function(id) {
+		db.run('DELETE FROM tasks WHERE id = ' + id);
 	}
 };

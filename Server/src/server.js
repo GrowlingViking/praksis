@@ -9,14 +9,14 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-    promise.resolve()
-    .then(() => res.json(task.listTasks()))
-    .catch(err => console.error(err.stack))
-    .finally(() => console.log(task.listTasks()));
+    task.listTasks().then(data => {
+        res.status(200).json(data);
+    })
+    .catch(err => console.error(err.stack));
 });
 
 promise.resolve()
-.then(() => db.open(':memory:', { Promise }))
+.then(() => db.open(':memory:', { promise }))
 .then(() => db.migrate({ force: 'last' }))
 .catch(err => console.error(err.stack))
 // Finally, launch Node.js app
