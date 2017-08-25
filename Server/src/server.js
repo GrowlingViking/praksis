@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('sqlite');
+const db = require('sqlite3');
 const taskBuilder = require('taskBuilder');
 const app = express();
 
