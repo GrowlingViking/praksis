@@ -17,4 +17,9 @@ function edit(task, newName) {
 	db.run('UPDATE tasks SET name = ' + newName + ' WHERE id = ' + task.id);
 };
 
+/* List all tasks in the database */
+function listTasks() {
+	db.run('SELECT * FROM tasks');
+};
+
 db.close();

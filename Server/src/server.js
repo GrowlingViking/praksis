@@ -1,20 +1,24 @@
 var express = require('express');
 var db = require('sqlite');
-const Promise = require('bluebird');
-var taskBuilder = require('./taskBuilder');
+const promise = require('bluebird');
+var task = require('./data/task');
 var app = express();
 
 app.get('/', function (req, res) {
     res.send('Connected with the server');
 });
 
-app.listen(8080, function() {
-    console.log('Server listening on port 8080');
+app.post('/', function (req, res) {
+    promise.resolve()
+    .then(() => res.json(task.listTasks()))
+    .catch(err => console.error(err.stack))
+    .finally(() => console.log(task.listTasks()));
 });
 
-Promise.resolve()
-.then(() => db.open('./database.sqlite', { Promise }))
+promise.resolve()
+.then(() => db.open(':memory:', { Promise }))
 .then(() => db.migrate({ force: 'last' }))
 .catch(err => console.error(err.stack))
 // Finally, launch Node.js app
-.finally(() => app.listen(3000));
+.finally(() => app.listen(3000),
+    console.log('Server app is listening on port 3000'));
