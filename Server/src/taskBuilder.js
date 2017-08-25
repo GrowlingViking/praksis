@@ -1,5 +1,5 @@
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database(':memory:');
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(':memory:');
 var task = require('./data/task');
 
 /* Create the task table in the database */

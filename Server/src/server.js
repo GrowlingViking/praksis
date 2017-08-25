@@ -1,9 +1,11 @@
-const express = require('express');
-const db = require('sqlite3');
-const taskBuilder = require('./taskBuilder');
-const app = express();
+var express = require('express');
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(':memory:');
+var taskBuilder = require('./taskBuilder');
+var app = express();
 
 app.get('/', function (req, res) {
+    res.send('Connected with the server');
     taskBuilder.init();
 });
 
