@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database(':memory:');
-const task = require('./data/task');
+var task = require('./data/task');
 
 /* Create the task table in the database */
 function init() {
@@ -9,15 +9,17 @@ function init() {
 
 /* Add a task to the database */
 function add(task) {
-	db.run('INSERT INTO tasks (id, name, done) VALUES (' + task.getId() + ', ' + task.getName() + ', ' + task.getDone() + ')')
+	db.run('INSERT INTO tasks (id, name, done) VALUES (' + task.id + ', ' + task.name + ', ' + task.done + ')')
 };
 
 /* Delete a task from the database */
 function delete(task) {
-	db.run('DELETE FROM tasks WHERE id = ' + task.getId())
+	db.run('DELETE FROM tasks WHERE id = ' + task.id);
 };
 
 /* Edit a task in the database */
 function edit(task, newName) {
-	db.run('UPDATE tasks SET name = ' + newName + ' WHERE id = ' + task.getId());
+	db.run('UPDATE tasks SET name = ' + newName + ' WHERE id = ' + task.id;
 };
+
+db.close();
