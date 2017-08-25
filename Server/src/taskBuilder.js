@@ -13,13 +13,13 @@ function add(task) {
 };
 
 /* Delete a task from the database */
-function delete(task) {
+function remove(task) {
 	db.run('DELETE FROM tasks WHERE id = ' + task.id);
 };
 
 /* Edit a task in the database */
 function edit(task, newName) {
-	db.run('UPDATE tasks SET name = ' + newName + ' WHERE id = ' + task.id;
+	db.run('UPDATE tasks SET name = ' + newName + ' WHERE id = ' + task.id);
 };
 
 db.close();
