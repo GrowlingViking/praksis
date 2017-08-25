@@ -2,11 +2,6 @@ var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database(':memory:');
 var task = require('./data/task');
 
-/* Create the task table in the database */
-function init() {
-	db.run('CREATE TABLE tasks (id INTEGER, name TEXT, done INTEGER)')
-};
-
 /* Add a task to the database */
 function add(task) {
 	db.run('INSERT INTO tasks (id, name, done) VALUES (' + task.id + ', ' + task.name + ', ' + task.done + ')')
