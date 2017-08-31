@@ -11,7 +11,12 @@ module.exports = {
 	},
 
 	getUser: function(username) {
-		return db.get('SELECT * FROM users WHERE username = ?', username);
+		db.get('SELECT * FROM users WHERE username = ?', username)
+		.then(userValues => {
+			var user = userValues;
+			return user;
+		})
+		.catch(err => console.error(err.stack));
 	}
 
 };
