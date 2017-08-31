@@ -5,6 +5,10 @@ const task = require('./data/task');
 const user = require('./data/user');
 const app = express();
 
+
+
+
+// Routes and stuff
 app.get('/', function (req, res) {
     res.send('Connected with the server');
 });
