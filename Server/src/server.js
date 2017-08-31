@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('sqlite');
 const promise = require('bluebird');
 const task = require('./data/task');
+const user = require('./data/user');
 const app = express();
 
 app.get('/', function (req, res) {
@@ -37,7 +38,14 @@ app.post('/edit', function (req, res) {
     task.editTask(2, "new Task3").then(data => {
         res.status(200).json(data);
     })
-    .catch(err => consle.error(err.stack));
+    .catch(err => console.error(err.stack));
+});
+
+app.get('/user', function (req, res) {
+    user.getUser('USER').then(data => {
+        res.status(200).json(data);
+    })
+    .catch(err => console.error(err.stack));
 });
 
 promise.resolve()

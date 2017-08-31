@@ -2,6 +2,7 @@ const db = require('sqlite');
 const promise = require('bluebird');
 
 module.exports = {
+
 	listTasks: function() {
 		return db.all('SELECT * FROM tasks');
 	},
