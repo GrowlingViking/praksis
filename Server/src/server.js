@@ -8,8 +8,17 @@ app.get('/', function (req, res) {
     res.send('Connected with the server');
 });
 
-app.post('/', function (req, res) {
+// Sends listTasks() to the database and returns the result as json
+app.get('/list', function (req, res) {
     task.listTasks().then(data => {
+        res.status(200).json(data);
+    })
+    .catch(err => console.error(err.stack));
+});
+
+// Sends removeTask to the database
+app.delete('/', function (req, res) {
+    task.removeTask(1).then(data => {
         res.status(200).json(data);
     })
     .catch(err => console.error(err.stack));
