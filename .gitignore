@@ -1,0 +1,4 @@
+# Ignore test stuff and the timelogg sheet
+Test/
+testapp/
+Timelogg.txt
