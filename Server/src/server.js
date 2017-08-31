@@ -1,8 +1,8 @@
-var express = require('express');
-var db = require('sqlite');
+const express = require('express');
+const db = require('sqlite');
 const promise = require('bluebird');
-var task = require('./data/task');
-var app = express();
+const task = require('./data/task');
+const app = express();
 
 app.get('/', function (req, res) {
     res.send('Connected with the server');
@@ -16,7 +16,7 @@ app.get('/list', function (req, res) {
     .catch(err => console.error(err.stack));
 });
 
-// Deletes a task from the database with id a parameter
+// Deletes a task from the database
 app.delete('/', function (req, res) {
     task.removeTask(1).then(data => {
         res.status(200).json(data);
@@ -24,7 +24,7 @@ app.delete('/', function (req, res) {
     .catch(err => console.error(err.stack));
 });
 
-// Adds a task to the database with the new id and name as parameter
+// Adds a task to the database
 app.post('/add', function (req, res) {
     task.addTask(1, "new Task2").then(data => {
         res.status(200).json(data);
@@ -32,7 +32,7 @@ app.post('/add', function (req, res) {
     .catch(err => console.error(err.stack));
 });
 
-// Updates a task in the database with id and the new name as parameter
+// Updates a task in the database
 app.post('/edit', function (req, res) {
     task.editTask(2, "new Task3").then(data => {
         res.status(200).json(data);

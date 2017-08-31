@@ -1,4 +1,4 @@
-var db = require('sqlite');
+const db = require('sqlite');
 const promise = require('bluebird');
 
 module.exports = {
