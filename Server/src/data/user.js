@@ -10,11 +10,15 @@ module.exports = {
 		});
 	},
 
-	getUser: function(username) {
+	getUser: function(username cb) {
 		db.get('SELECT * FROM users WHERE username = ?', username)
 		.then(userValues => {
 			var user = userValues;
-			return user;
+			console.log(user);
+			if (user == 'undefined') {
+				return cb(null, null);
+			}
+			return cb(null, user);
 		})
 		.catch(err => console.error(err.stack));
 	}

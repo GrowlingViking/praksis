@@ -1,4 +1,2 @@
-# Ignore test stuff and the timelogg sheet
-Test/
-testapp/
+# Ignore timelogg sheet
 Timelogg.txt

@@ -55,7 +55,7 @@ app.post('/edit', function (req, res) {
 });
 
 app.get('/user', function (req, res) {
-    res.status(200).json(user.getUser('USER'));
+    res.status(200).json(user.getUser('USE'));
 });
 
 promise.resolve()
