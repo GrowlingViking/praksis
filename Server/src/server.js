@@ -54,8 +54,15 @@ app.post('/edit', function (req, res) {
     .catch(err => console.error(err.stack));
 });
 
+/*  Test for getUser(), didn't show anything
 app.get('/user', function (req, res) {
-    res.status(200).json(user.getUser('USE'));
+    res.status(200).json(user.getUser('USER'));
+});
+*/
+
+// TODO Do this plz
+app.post('/register', function (req, res) {
+    
 });
 
 promise.resolve()

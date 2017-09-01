@@ -3,11 +3,13 @@ const db = require('sqlite');
 module.exports = {
 
 	createUser: function(id, username, password) {
-		return db.run('INSERT INTO users (id, username, password) VALUES ($id, $username, $password)', {
+		db.run('INSERT INTO users (id, username, password) VALUES ($id, $username, $password)', {
 			$id: id,
 			$username: username,
 			$password: password
-		});
+		})
+		.then(data => return data;)
+		.catch(err => console.error(err.stack));
 	},
 
 	getUser: function(username cb) {
@@ -15,6 +17,7 @@ module.exports = {
 		.then(userValues => {
 			var user = userValues;
 			console.log(user);
+			// TODO Might not work
 			if (user == 'undefined') {
 				return cb(null, null);
 			}
