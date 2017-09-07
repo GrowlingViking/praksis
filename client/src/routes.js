@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route } from 'react-router-dom';
 
 import App from './App';
 import TasksPage from './components/TasksPage';
 
 export default (
     <Route path="/" component={App}>
-        <IndexRoute component={TasksPage} />
+        <Route path="tasks" component={TasksPage} />
         //<Route path="tasks" component={TasksPage} />
     </Route>
 );
