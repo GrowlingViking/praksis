@@ -6,7 +6,6 @@ import TasksPage from './components/TasksPage';
 
 export default (
     <Route path="/" component={App}>
-        <Route path="tasks" component={TasksPage} />
-        //<Route path="tasks" component={TasksPage} />
+        <Route path="/tasks" component={TasksPage}/>
     </Route>
 );
