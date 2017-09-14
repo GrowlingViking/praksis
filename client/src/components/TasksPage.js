@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import logo from '../logo.svg';
 import '../App.css';
 import * as taskActions from '../actions/taskActions';
@@ -23,7 +24,7 @@ class TasksPage extends Component {
     }
 
     onClickSave() {
-        this.props.dispatch(taskActions.createTask(this.state.task));
+        this.props.actions.createTask(this.state.task);
     }
 
     render() {
@@ -37,12 +38,17 @@ class TasksPage extends Component {
                     value={this.state.task.name} />
                 <input
                     type="submit"
-                    value="Save"
+                    value="Add"
                     onClick={this.onClickSave} />
             </div>
       );
     }
 }
+
+TasksPage.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired
+};
 
 function mapStateToProps(state, ownProps) {
     return {
@@ -50,4 +56,10 @@ function mapStateToProps(state, ownProps) {
     };
 }
 
-export default connect(mapStateToProps)(TasksPage);
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(taskActions, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TasksPage);

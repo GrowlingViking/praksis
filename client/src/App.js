@@ -18,10 +18,13 @@ class App extends Component {
           Tasks comming soon
         </p>
         <div>
+          <NavLink exact to="/">Home</NavLink>
+          {' | '}
           <NavLink exact to="/tasks">Tasks</NavLink>
         </div>
         <Switch>
           <Route exact path="/tasks" component={TasksPage} />
+          <Route exact path="/" component={App.js} />
         </Switch>
       </div>
     );
