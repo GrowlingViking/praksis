@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import logo from '../logo.svg';
 import '../App.css';
+import * as taskActions from '../actions/taskActions';
 
 class TasksPage extends Component {
     constructor(props, context) {
@@ -21,7 +23,7 @@ class TasksPage extends Component {
     }
 
     onClickSave() {
-        alert(`Saving ${this.state.task.name}`);
+        this.props.dispatch(taskActions.createTask(this.state.task));
     }
 
     render() {
@@ -42,4 +44,10 @@ class TasksPage extends Component {
     }
 }
 
-export default TasksPage
+function mapStateToProps(state, ownProps) {
+    return {
+        tasks: state.tasks
+    };
+}
+
+export default connect(mapStateToProps)(TasksPage);
