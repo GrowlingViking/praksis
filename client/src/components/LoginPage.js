@@ -37,14 +37,14 @@ class LoginPage extends Component {
     render() {
         return (
             <div>
-                <h1>Login</h1>
-                <h2>Username</h2>
+                <h2>Login</h2>
+                <h3>Username</h3>
                 <input
                     type="text"
                     onChange={this.onUsernameChange}
                     value={this.state.user.username} />
 
-                <h2>Password</h2>
+                <h3>Password</h3>
                 <input
                     type="password"
                     onChange={this.onPasswordChange}

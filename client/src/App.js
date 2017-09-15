@@ -17,9 +17,6 @@ class App extends Component {
           <h2>Welcome to Taskmanager</h2>
           {this.props.children}
         </div>
-        <p className="App-intro">
-          Site under construction
-        </p>
         <div>
           <NavLink exact to="/">Home</NavLink>
           {' | '}
@@ -27,6 +24,9 @@ class App extends Component {
           {' | '}
           <NavLink exact to="/login">Login</NavLink>
         </div>
+
+        <h1>Site under construction</h1>
+
         <Switch>
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/tasks" component={TasksPage} />

@@ -30,8 +30,8 @@ class TasksPage extends Component {
     render() {
         return (
             <div>
-                <h1>Tasks</h1>
-                <h2>Add task</h2>
+                <h2>Tasks</h2>
+                <h3>Add task</h3>
                 <input
                     type="text"
                     onChange={this.onNameChange}
