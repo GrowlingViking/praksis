@@ -1,17 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import logo from '../logo.svg';
 import '../App.css';
 import * as taskActions from '../actions/taskActions';
+import TaskList from './TaskList';
 
 class TasksPage extends Component {
     constructor(props, context) {
         super(props, context);
-
-        this.state = {
-            task: { name: "", done: false }
-        };
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onClickSave = this.onClickSave.bind(this);
@@ -28,18 +24,12 @@ class TasksPage extends Component {
     }
 
     render() {
+        const {tasks} = this.props;
+
         return (
             <div>
                 <h2>Tasks</h2>
-                <h3>Add task</h3>
-                <input
-                    type="text"
-                    onChange={this.onNameChange}
-                    value={this.state.task.name} />
-                <input
-                    type="submit"
-                    value="Add"
-                    onClick={this.onClickSave} />
+                <TaskList tasks={tasks} />
             </div>
       );
     }

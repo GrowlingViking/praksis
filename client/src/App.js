@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { NavLink, Switch } from 'react-router-dom';
 import TasksPage from './components/TasksPage';
@@ -36,9 +36,5 @@ class App extends Component {
     );
   }
 }
-
-App.propTypes = {
-    children: PropTypes.object.isRequired
-};
 
 export default App;

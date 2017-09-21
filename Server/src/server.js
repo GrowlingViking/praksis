@@ -3,6 +3,7 @@ const db = require('sqlite');
 const promise = require('bluebird');
 const task = require('./data/task');
 const user = require('./data/user');
+const cors = require('cors');
 const app = express();
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
@@ -19,13 +20,16 @@ passport.use(new Strategy(
         });
 }));
 
+app.use(cors());
+
 // Routes and stuff
 app.get('/', function (req, res) {
     res.send('Connected with the server');
 });
 
 // Asks the database to list all task
-app.get('/list', function (req, res) {
+app.get('/tasks', function (req, res) {
+    console.log('Received a get request to list tasks');
     task.listTasks().then(data => {
         res.status(200).json(data);
     })
@@ -74,5 +78,5 @@ promise.resolve()
 .then(id = 0)
 .catch(err => console.error(err.stack))
 // Finally, launch Node.js app
-.finally(() => app.listen(3000),
-    console.log('Server app is listening on port 3000 ' + id));
+.finally(() => app.listen(3001),
+    console.log('Server app is listening on port 3001'));

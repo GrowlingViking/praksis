@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import logo from '../logo.svg';
 import '../App.css';
 import * as userActions from '../actions/userActions';
 

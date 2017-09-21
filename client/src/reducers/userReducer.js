@@ -4,6 +4,7 @@ export default function userReducer(state = "", action) {
     switch(action.type) {
         case types.LOGIN:
             //TODO try to login with the given user
+            break;
         default:
             return state;
     }
