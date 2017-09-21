@@ -7,6 +7,8 @@ const app = express();
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
 
+var id = 1;
+
 passport.use(new Strategy(
     function (username, password, cb) {
         user.getUser(username, function (err, user) {
@@ -40,8 +42,9 @@ app.delete('/', function (req, res) {
 
 // Adds a task to the database
 app.post('/add', function (req, res) {
-    task.addTask(1, "new Task2").then(data => {
+    task.addTask(id, "new Task2").then(data => {
         res.status(200).json(data);
+        id ++;
     })
     .catch(err => console.error(err.stack));
 });
@@ -62,13 +65,14 @@ app.get('/user', function (req, res) {
 
 // TODO Do this plz
 app.post('/register', function (req, res) {
-    
+
 });
 
 promise.resolve()
 .then(() => db.open(':memory:', { promise }))
 .then(() => db.migrate({ force: 'last' }))
+.then(id = 0)
 .catch(err => console.error(err.stack))
 // Finally, launch Node.js app
 .finally(() => app.listen(3000),
-    console.log('Server app is listening on port 3000'));
+    console.log('Server app is listening on port 3000 ' + id));

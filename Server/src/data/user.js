@@ -8,11 +8,10 @@ module.exports = {
 			$username: username,
 			$password: password
 		})
-		.then(data => return data;)
 		.catch(err => console.error(err.stack));
 	},
 
-	getUser: function(username cb) {
+	getUser: function(username, cb) {
 		db.get('SELECT * FROM users WHERE username = ?', username)
 		.then(userValues => {
 			var user = userValues;
