@@ -48,6 +48,7 @@ class LoginPage extends Component {
                     type="password"
                     onChange={this.onPasswordChange}
                     value={this.state.user.password} />
+                <h3></h3>
                 <input
                     type="submit"
                     value="Login"
