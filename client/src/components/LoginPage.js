@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import '../App.css';
@@ -48,7 +49,7 @@ class LoginPage extends Component {
                     type="password"
                     onChange={this.onPasswordChange}
                     value={this.state.user.password} />
-                <h3></h3>
+                <h3> </h3>
                 <input
                     type="submit"
                     value="Login"

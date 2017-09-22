@@ -3,11 +3,11 @@ import { Route } from 'react-router';
 import { NavLink, Switch } from 'react-router-dom';
 import TasksPage from './components/TasksPage';
 import LoginPage from './components/LoginPage';
+import ManageTaskPage from './components/ManageTaskPage';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-
 
   render() {
     return (
@@ -18,19 +18,19 @@ class App extends Component {
           {this.props.children}
         </div>
         <div>
-          <NavLink exact to="/">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
           {' | '}
-          <NavLink exact to="/tasks">Tasks</NavLink>
+          <NavLink to="/tasks">Tasks</NavLink>
           {' | '}
-          <NavLink exact to="/login">Login</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </div>
 
-        <h1>Site under construction</h1>
-
         <Switch>
-            <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/tasks" component={TasksPage} />
-            <Route exact path="/" component={App.js} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/tasks" component={TasksPage} />
+            <Route path="/task/:id" component={ManageTaskPage} />
+            <Route path="/task/" component={ManageTaskPage} />
+            <Route path="/" component={App.js} />
         </Switch>
       </div>
     );

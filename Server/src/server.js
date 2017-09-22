@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
 
 // Asks the database to list all task
 app.get('/tasks', function (req, res) {
-    console.log('Received a get request to list tasks');
     task.listTasks().then(data => {
         res.status(200).json(data);
     })

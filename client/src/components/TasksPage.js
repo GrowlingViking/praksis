@@ -1,26 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { NavLink } from 'react-router-dom';
 import '../App.css';
 import * as taskActions from '../actions/taskActions';
-import TaskList from './TaskList';
 
 class TasksPage extends Component {
     constructor(props, context) {
         super(props, context);
 
-        this.onNameChange = this.onNameChange.bind(this);
-        this.onClickSave = this.onClickSave.bind(this);
+        this.state = {
+            tasks: []
+        }
     }
 
-    onNameChange(event) {
-        const task = this.state.task;
-        task.name = event.target.value;
-        this.setState({task: task})
-    }
-
-    onClickSave() {
-        this.props.actions.createTask(this.state.task);
+    onClick(task) {
+        this.setState(task);
     }
 
     render() {
@@ -29,7 +25,19 @@ class TasksPage extends Component {
         return (
             <div>
                 <h2>Tasks</h2>
-                <TaskList tasks={tasks} />
+                <table className="table">
+                    <tbody>
+                    {tasks.map(task =>
+                        <tr key={task.id}>
+                            <td><NavLink to={"/task/" + task.id}>{task.name}</NavLink></td>
+                            <td>{task.done}</td>
+                        </tr>
+                    )}
+                    </tbody>
+                </table>
+                <form action="/task/">
+                    <input type="submit" value="Create new task" />
+                </form>
             </div>
       );
     }
@@ -37,7 +45,7 @@ class TasksPage extends Component {
 
 TasksPage.propTypes = {
     tasks: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+    task: PropTypes.object
 };
 
 function mapStateToProps(state, ownProps) {
