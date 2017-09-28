@@ -45,7 +45,7 @@ app.delete('/', function (req, res) {
 
 // Adds a task to the database
 app.post('/add', function (req, res) {
-    task.addTask(id, "new Task2").then(data => {
+    task.addTask(id, req.query.name).then(data => {
         res.status(200).json(data);
         id ++;
     })
@@ -54,7 +54,7 @@ app.post('/add', function (req, res) {
 
 // Updates a task in the database
 app.post('/edit', function (req, res) {
-    task.editTask(2, "new Task3").then(data => {
+    task.editTask(req.query.id, req.query.name, req.query.done).then(data => {
         res.status(200).json(data);
     })
     .catch(err => console.error(err.stack));
