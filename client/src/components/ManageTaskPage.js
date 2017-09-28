@@ -15,12 +15,23 @@ class ManageTaskPage extends Component {
         }
 
         this.onNameChange = this.onNameChange.bind(this);
+        this.onDoneChange = this.onDoneChange.bind(this);
         this.onClickSave = this.onClickSave.bind(this);
     }
 
     onNameChange(event) {
         const task = this.state.task;
         task.name = event.target.value;
+        this.setState({task: task});
+    }
+
+    onDoneChange() {
+        const task = this.state.task;
+        if(task.done) {
+            task.done = 0;
+        } else {
+            task.done = 1;
+        }
         this.setState({task: task});
     }
 
@@ -39,8 +50,11 @@ class ManageTaskPage extends Component {
                     type="text"
                     onChange={this.onNameChange}
                     value={this.state.task.name} />
-
-                <h1> </h1>
+                <p><input
+                        type="submit"
+                        value="Toggle done"
+                        onClick={this.onDoneChange} />
+                </p>
                 <input
                     type="submit"
                     value="Update"

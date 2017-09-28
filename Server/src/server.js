@@ -56,8 +56,6 @@ app.post('/add', function (req, res) {
 
 // Updates a task in the database
 app.post('/edit', function (req, res) {
-    console.log('Edit request received');
-    console.log(req.body.name);
     task.editTask(req.body.id, req.body.name, req.body.done).then(data => {
         res.status(200).json(data);
     })
