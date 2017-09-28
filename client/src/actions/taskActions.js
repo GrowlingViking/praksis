@@ -1,8 +1,13 @@
 import axios from 'axios';
 import * as types from './actionTypes';
 
-export function createTask(task) {
-    return { type: types.CREATE_TASK, name: task.name };
+export function createTask(name) {
+    return (dispatch) => {
+        axios.post('http://localhost:3001/add', {
+            name: name
+        }).then(updateList(dispatch))
+        .catch(error => console.log(error));
+    }
 }
 
 export function editTask(task) {

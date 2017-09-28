@@ -50,10 +50,11 @@ class ManageTaskPage extends Component {
                     type="text"
                     onChange={this.onNameChange}
                     value={this.state.task.name} />
-                <p><input
-                        type="submit"
-                        value="Toggle done"
-                        onClick={this.onDoneChange} />
+                <p>
+                <input
+                    type="submit"
+                    value="Toggle done"
+                    onClick={this.onDoneChange} />
                 </p>
                 <input
                     type="submit"
@@ -65,8 +66,7 @@ class ManageTaskPage extends Component {
 }
 
 ManageTaskPage.PropTypes = {
-    tasks: PropTypes.array.isRequired,
-    actions: PropTypes.object
+    tasks: PropTypes.array.isRequired
 }
 
 function mapStateToProps(state, ownProps) {

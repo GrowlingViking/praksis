@@ -1,15 +1,36 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
-import * as taskActions from '../actions/taskActions';
+import { createTask } from '../actions/taskActions';
 
 class TasksPage extends Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            newTaskName: ""
+        }
+
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onClickSave = this.onClickSave.bind(this);
+    }
+
+    onNameChange(event) {
+        var name = this.state.newTaskName;
+        name = event.target.value;
+        this.setState({newTaskName: name});
+    }
+
+    onClickSave() {
+        this.props.create(this.state.newTaskName);
+        window.location.reload();
+    }
 
     render() {
         const {tasks} = this.props;
+        console.log(this.state);
 
         return (
             <div>
@@ -24,9 +45,13 @@ class TasksPage extends Component {
                     )}
                     </tbody>
                 </table>
-                <form action="/task/">
-                    <input type="submit" value="Create new task" />
-                </form>
+                <input
+                    type="text"
+                    onChange={this.onNameChange} />
+                <input
+                    type="submit"
+                    value="Create new task"
+                    onClick={this.onClickSave} />
             </div>
       );
     }
@@ -44,7 +69,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(taskActions, dispatch)
+        create: (name) => dispatch(createTask(name))
     };
 }
 

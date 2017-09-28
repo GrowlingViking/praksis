@@ -2,24 +2,12 @@ const express = require('express');
 const db = require('sqlite');
 const promise = require('bluebird');
 const task = require('./data/task');
-const user = require('./data/user');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
 
-var id = 1;
-
-passport.use(new Strategy(
-    function (username, password, cb) {
-        user.getUser(username, function (err, user) {
-            if (err) { return cb(err); }
-            if (!user) { return cb(null, false); }
-            if (user.password != password) { return cb(null, false); }
-            return cb(null, user);
-        });
-}));
+var id = 4;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -47,7 +35,7 @@ app.delete('/', function (req, res) {
 
 // Adds a task to the database
 app.post('/add', function (req, res) {
-    task.addTask(id, req.query.name).then(data => {
+    task.addTask(id, req.body.name).then(data => {
         res.status(200).json(data);
         id ++;
     })
@@ -68,15 +56,10 @@ app.get('/user', function (req, res) {
 });
 */
 
-// TODO Do this plz
-app.post('/register', function (req, res) {
-
-});
-
 promise.resolve()
 .then(() => db.open(':memory:', { promise }))
 .then(() => db.migrate({ force: 'last' }))
-.then(id = 0)
+.then(id = 3)
 .catch(err => console.error(err.stack))
 // Finally, launch Node.js app
 .finally(() => app.listen(3001),
