@@ -7,13 +7,6 @@ import '../App.css';
 import * as taskActions from '../actions/taskActions';
 
 class TasksPage extends Component {
-    constructor(props, context) {
-        super(props, context);
-
-        this.state = {
-            tasks: []
-        }
-    }
 
     render() {
         const {tasks} = this.props;

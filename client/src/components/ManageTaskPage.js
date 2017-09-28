@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as taskActions from '../actions/taskActions';
+import { editTask } from '../actions/taskActions';
 import '../App.css';
-
-var id = -1;
 
 class ManageTaskPage extends Component {
     constructor(props, context) {
         super(props, context);
 
-        id = this.props.match.params.id;
+        var task = this.props.tasks[this.props.match.params.id];
 
         this.state = {
-            task: this.props.tasks[id]
+            task: task
         }
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -24,11 +21,11 @@ class ManageTaskPage extends Component {
     onNameChange(event) {
         const task = this.state.task;
         task.name = event.target.value;
-        this.setState({task: task})
+        this.setState({task: task});
     }
 
     onClickSave() {
-        this.props.actions.editTask(this.state.task);
+        this.props.updateTask(this.state.task);
     }
 
     render() {
@@ -66,7 +63,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(taskActions, dispatch)
+        updateTask: (task) => dispatch(editTask(task))
     };
 }
 

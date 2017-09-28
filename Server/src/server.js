@@ -4,6 +4,7 @@ const promise = require('bluebird');
 const task = require('./data/task');
 const user = require('./data/user');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const app = express();
 const passport = require('passport');
 const Strategy = require('passport-local').Strategy;
@@ -21,6 +22,7 @@ passport.use(new Strategy(
 }));
 
 app.use(cors());
+app.use(bodyParser.json());
 
 // Routes and stuff
 app.get('/', function (req, res) {
@@ -54,7 +56,9 @@ app.post('/add', function (req, res) {
 
 // Updates a task in the database
 app.post('/edit', function (req, res) {
-    task.editTask(req.query.id, req.query.name, req.query.done).then(data => {
+    console.log('Edit request received');
+    console.log(req.body.name);
+    task.editTask(req.body.id, req.body.name, req.body.done).then(data => {
         res.status(200).json(data);
     })
     .catch(err => console.error(err.stack));

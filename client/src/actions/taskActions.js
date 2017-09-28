@@ -6,7 +6,16 @@ export function createTask(task) {
 }
 
 export function editTask(task) {
-    return { type: types.EDIT_TASK, task };
+    console.log('Sending task:');
+    console.log(task);
+    return (dispatch) => {
+        axios.post('http://localhost:3001/edit', {
+            id: task.id,
+            name: task.name,
+            done: task.done
+        }).then(updateList(dispatch))
+        .catch(error => console.log(error));
+    }
 }
 
 export function removeTask(task) {
@@ -14,6 +23,7 @@ export function removeTask(task) {
 }
 
 export function updateListSuccess(tasks) {
+    console.log(tasks);
     return { type: types.UPDATE_LIST_SUCCESS, tasks }
 }
 
