@@ -37,6 +37,7 @@ class ManageTaskPage extends Component {
 
     onClickSave() {
         this.props.updateTask(this.state.task);
+        window.location.href = "/tasks";
     }
 
     render() {
@@ -50,12 +51,12 @@ class ManageTaskPage extends Component {
                     type="text"
                     onChange={this.onNameChange}
                     value={this.state.task.name} />
-                <p>
+                <p> Done: {this.state.task.done} </p>
                 <input
                     type="submit"
                     value="Toggle done"
                     onClick={this.onDoneChange} />
-                </p>
+                <p></p>
                 <input
                     type="submit"
                     value="Update"

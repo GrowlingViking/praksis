@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const Strategy = require('passport-local').Strategy;
 
-var id = 4;
+var id = 0;
 
 app.use(cors());
 app.use(bodyParser.json());
