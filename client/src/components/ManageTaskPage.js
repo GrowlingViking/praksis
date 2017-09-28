@@ -5,13 +5,17 @@ import { bindActionCreators } from 'redux';
 import * as taskActions from '../actions/taskActions';
 import '../App.css';
 
+var id = -1;
+
 class ManageTaskPage extends Component {
     constructor(props, context) {
         super(props, context);
 
+        id = this.props.match.params.id;
+
         this.state = {
-            task: {id: -1, name: "", done: false}
-        };
+            task: this.props.tasks[id]
+        }
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onClickSave = this.onClickSave.bind(this);
@@ -24,15 +28,12 @@ class ManageTaskPage extends Component {
     }
 
     onClickSave() {
-        this.props.actions.createTask(this.state.task);
+        this.props.actions.editTask(this.state.task);
     }
 
     render() {
-        const id = this.props.match.params.id;
-        const task = this.props.tasks[id];
         console.log(this.props);
         console.log(this.state);
-        console.log(task);
 
         return (
             <div>
@@ -54,13 +55,12 @@ class ManageTaskPage extends Component {
 
 ManageTaskPage.PropTypes = {
     tasks: PropTypes.array.isRequired,
-    task: PropTypes.object
+    actions: PropTypes.object
 }
 
 function mapStateToProps(state, ownProps) {
     return{
-        tasks: state.tasks,
-        task: state.task
+        tasks: state.tasks
     };
 }
 

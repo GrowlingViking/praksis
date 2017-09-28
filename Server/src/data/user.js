@@ -2,9 +2,8 @@ const db = require('sqlite');
 
 module.exports = {
 
-	createUser: function(id, username, password) {
-		db.run('INSERT INTO users (id, username, password) VALUES ($id, $username, $password)', {
-			$id: id,
+	createUser: function(username, password) {
+		db.run('INSERT INTO users (username, password) VALUES ($username, $password)', {
 			$username: username,
 			$password: password
 		})

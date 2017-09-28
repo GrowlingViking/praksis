@@ -15,10 +15,6 @@ class TasksPage extends Component {
         }
     }
 
-    onClick(task) {
-        this.setState(task);
-    }
-
     render() {
         const {tasks} = this.props;
 
@@ -44,8 +40,7 @@ class TasksPage extends Component {
 }
 
 TasksPage.propTypes = {
-    tasks: PropTypes.array.isRequired,
-    task: PropTypes.object
+    tasks: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps) {

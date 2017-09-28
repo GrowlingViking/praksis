@@ -17,10 +17,11 @@ module.exports = {
 		});
 	},
 
-	editTask: function(id, newName) {
-		return db.run('UPDATE tasks SET name = $newName WHERE id = $id', {
+	editTask: function(id, newName, done) {
+		return db.run('UPDATE tasks SET name = $newName, done = $done WHERE id = $id', {
 			$id: id,
-			$newName: newName
+			$newName: newName,
+            $done: done
 		});
 	}
 };
