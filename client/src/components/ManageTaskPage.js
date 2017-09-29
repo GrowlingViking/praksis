@@ -37,7 +37,7 @@ class ManageTaskPage extends Component {
 
     onClickSave() {
         this.props.updateTask(this.state.task);
-        window.location.href = "/tasks";
+        window.location.href = "/";
     }
 
     render() {

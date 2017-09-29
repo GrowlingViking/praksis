@@ -18,14 +18,11 @@ class App extends Component {
         </div>
         <div>
           <NavLink to="/">Home</NavLink>
-          {' | '}
-          <NavLink to="/tasks">Tasks</NavLink>
         </div>
 
         <Switch>
-            <Route path="/tasks" component={TasksPage} />
             <Route path="/task/:id" component={ManageTaskPage} />
-            <Route path="/" component={App.js} />
+            <Route path="/" component={TasksPage} />
         </Switch>
       </div>
     );
