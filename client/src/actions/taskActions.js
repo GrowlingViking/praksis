@@ -21,7 +21,14 @@ export function editTask(task) {
 }
 
 export function removeTask(task) {
-    return { type: 'REMOVE_TASK', task };
+    return (dispatch) => {
+        axios.delete('http://localhost:3001/remove', {
+            params: {
+                id: task.id
+            }
+        }).then(updateList(dispatch))
+        .catch(error => console.log(error));
+    }
 }
 
 export function updateListSuccess(tasks) {

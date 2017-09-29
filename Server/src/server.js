@@ -26,8 +26,9 @@ app.get('/tasks', function (req, res) {
 });
 
 // Deletes a task from the database
-app.delete('/', function (req, res) {
-    task.removeTask(1).then(data => {
+app.delete('/remove', function (req, res) {
+    console.log(req.query);
+    task.removeTask(req.query.id).then(data => {
         res.status(200).json(data);
     })
     .catch(err => console.error(err.stack));

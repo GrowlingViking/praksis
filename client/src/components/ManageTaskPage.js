@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { editTask } from '../actions/taskActions';
+import { editTask, removeTask } from '../actions/taskActions';
 import '../App.css';
 
 class ManageTaskPage extends Component {
@@ -16,6 +16,7 @@ class ManageTaskPage extends Component {
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onDoneChange = this.onDoneChange.bind(this);
+        this.onClickRemove = this.onClickRemove.bind(this);
         this.onClickSave = this.onClickSave.bind(this);
     }
 
@@ -33,6 +34,11 @@ class ManageTaskPage extends Component {
             task.done = 1;
         }
         this.setState({task: task});
+    }
+
+    onClickRemove() {
+        this.props.remove(this.state.task);
+        window.location.href = "/";
     }
 
     onClickSave() {
@@ -59,6 +65,11 @@ class ManageTaskPage extends Component {
                 <p></p>
                 <input
                     type="submit"
+                    value="Remove task"
+                    onClick={this.onClickRemove} />
+                <p></p>
+                <input
+                    type="submit"
                     value="Update"
                     onClick={this.onClickSave} />
             </div>
@@ -78,7 +89,8 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        updateTask: (task) => dispatch(editTask(task))
+        updateTask: (task) => dispatch(editTask(task)),
+        remove: (task) => dispatch(removeTask(task))
     };
 }
 
