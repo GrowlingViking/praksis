@@ -1,5 +1,4 @@
 import axios from 'axios';
-import * as types from './actionTypes';
 
 export function createTask(name) {
     return (dispatch) => {
@@ -22,11 +21,11 @@ export function editTask(task) {
 }
 
 export function removeTask(task) {
-    return { type: types.REMOVE_TASK, task };
+    return { type: 'REMOVE_TASK', task };
 }
 
 export function updateListSuccess(tasks) {
-    return { type: types.UPDATE_LIST_SUCCESS, tasks }
+    return { type: 'UPDATE_LIST_SUCCESS', tasks }
 }
 
 export function updateList(dispatch) {
