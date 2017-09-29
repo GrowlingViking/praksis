@@ -8,11 +8,21 @@ class ManageTaskPage extends Component {
     constructor(props, context) {
         super(props, context);
 
-        var task = this.props.tasks[this.props.match.params.id];
+        //var task = this.props.tasks[this.props.match.params.id];
+
+        var task = {id: -1, name: "", done: false };
+        var targetId = this.props.match.params.id;
+        this.props.tasks.forEach(function (footask) {
+            if (footask.id == targetId) {
+                task = footask;
+            }
+        })
 
         this.state = {
             task: task
         }
+
+        console.log(this.state);
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onDoneChange = this.onDoneChange.bind(this);
@@ -47,8 +57,6 @@ class ManageTaskPage extends Component {
     }
 
     render() {
-        console.log(this.props);
-        console.log(this.state);
 
         return (
             <div>
