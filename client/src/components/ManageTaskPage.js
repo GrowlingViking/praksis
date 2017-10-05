@@ -20,8 +20,6 @@ class ManageTaskPage extends Component {
             task: task
         }
 
-        console.log(this.state);
-
         this.onNameChange = this.onNameChange.bind(this);
         this.onDoneChange = this.onDoneChange.bind(this);
         this.onClickRemove = this.onClickRemove.bind(this);
