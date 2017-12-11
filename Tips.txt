@@ -1,0 +1,4 @@
+Sjekk om dobbelklikk på register-company sido skaper feilmelding "Company name already registered"
+
+docker-compose exec db psql -U wa2 wa2
+UPDATE "AspNetUsers" SET "IsAdmin" = true WHERE "Email" = '@yourmail';

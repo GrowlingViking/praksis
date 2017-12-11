@@ -1,0 +1,6 @@
+Wide Assessment has a search function that right now is running way to slow. And they have offered us the task to improve this, making the search smarter and faster. 
+This search is made by businesses to find the right candidate for the job they are posting. 
+Each search is looking through WAs database of job searchers that posts their own skills that the search is matching with the requirements of the business. 
+The goal here is to make the search in WA faster by adding indexes and make better queries, and making the search smarter by only updating the search when it is needed. 
+We also need to visualize the status of the search, when it’s queueing or processing, and when it’s done.
+We are going to measure and report on how long the search takes before we start, and then do the same after each change we do to the system. 
