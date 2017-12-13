@@ -1,14 +1,14 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/W32TeX)  (format=lualatex 2017.12.11)  11 DEC 2017 21:53
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.12.13)  13 DEC 2017 09:34
  restricted system commands enabled.
  file:line:error style messages enabled.
-**C:/Users/Sigurd/Desktop/praksis/Innleveringar/Sluttraport.tex
-(c:/Users/Sigurd/Desktop/praksis/Innleveringar/Sluttraport.tex
+**Sluttraport.tex
+(./Sluttraport.tex
 LaTeX2e <2017-04-15>
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended collection.(using cache: C:/texlive/2017/texmf-var/luatex-cache/generic)
-luaotfload | conf : Root cache directory is C:/texlive/2017/texmf-var/luatex-cache/generic/names.
-luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse-resolved path “c:/texlive/2017/texmf-dist/tex/luatex/luaotfload/fontloader-2017-02-11.lua”.
+Lua module: lualibs-extended 2017-02-01 2.5 ConTeXt Lua libraries -- extended collection.(using write cache: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic)(using read cache: /usr/local/texlive/2017/texmf-var/luatex-cache/generic /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic)
+luaotfload | conf : Root cache directory is /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2017-02-11.lua” from kpse-resolved path “/usr/local/texlive/2017/texmf-dist/tex/luatex/luaotfload/fontloader-2017-02-11.lua”.
 Lua-only attribute luaotfload@state = 1
 Lua-only attribute luaotfload@noligature = 2
 Lua-only attribute luaotfload@syllabe = 3
@@ -17,19 +17,19 @@ Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 4
-luaotfload | conf : Root cache directory is C:/texlive/2017/texmf-var/luatex-cache/generic/names.
+luaotfload | conf : Root cache directory is /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/names.
 Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_font'.
 Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch_font'.
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.187 seconds
+luaotfload | main : initialization completed in 0.108 seconds
 Babel <3.15> and hyphenation patterns for 1 language(s) loaded.
-(c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(c:/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from C:/texlive/2017/texmf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc))
+luaotfload | db : Font names database loaded from /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/names/luaotfload-names.luc(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc))
 \c@part=\count79
 \c@section=\count80
 \c@subsection=\count81
@@ -41,9 +41,9 @@ luaotfload | db : Font names database loaded from C:/texlive/2017/texmf-var/luat
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (c:/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2017/12/05 L3 programming layer (loader) 
- (c:/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2017/12/05 L3 programming layer (code)
 \ucharcat@table=\catcodetable5
 \c_max_int=\count87
@@ -185,7 +185,7 @@ Package: expl3 2017/12/05 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen131
 \l__coffin_scaled_total_height_dim=\dimen132
 \l__coffin_scaled_width_dim=\dimen133
-) (c:/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count168
 \l__driver_tmp_box=\box41
@@ -198,7 +198,7 @@ Package: xparse 2017/12/05 L3 Experimental document command parser
 \l__xparse_v_nesting_int=\count173
 )
 Package: fontspec 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2017/11/09 2.6g Font selection for XeLaTeX and LuaLaTeX (c:/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Lua module: fontspec 2017/11/09 2.6g Font selection for XeLaTeX and LuaLaTeX (/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count174
 \l__fontspec_language_int=\count175
@@ -212,9 +212,9 @@ Package: fontspec-luatex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
 \l__fontspec_tmpb_dim=\dimen135
 \l__fontspec_tmpc_dim=\dimen136
 \g__file_internal_ior=\read1
- (c:/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- (c:/texlive/2017/texmf-dist/tex/latex/base/tuenc.def
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/tuenc.def
 File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 ))
@@ -388,14 +388,14 @@ LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 . 
 . Defining command \UndeclareComposite with sig. 'mm' on line 3440.
 .................................................
- (c:/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/fontspec/fontspec.cfg)
 LaTeX Info: Redefining \itshape on input line 3625.
 LaTeX Info: Redefining \slshape on input line 3630.
 LaTeX Info: Redefining \scshape on input line 3635.
 LaTeX Info: Redefining \upshape on input line 3640.
 LaTeX Info: Redefining \em on input line 3670.
 LaTeX Info: Redefining \emph on input line 3695.
-(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc)
+(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc)(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc)
 LaTeX Info: Redefining \- on input line 3749.
 .................................................
 . LaTeX info: "xparse/redefine-command"
@@ -407,7 +407,8 @@ LaTeX Info: Redefining \- on input line 3749.
 . 
 . Defining command \liningnums with sig. 'm' on line 3848.
 .................................................
-)) (./Sluttraport.aux)
+))
+(./Sluttraport.aux)
 \openout1 = Sluttraport.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -482,30 +483,30 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 9.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 9.
-(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)(load luc: C:/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)
+(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc)(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc)(load luc: /home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 11.
  [1
 
-{c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Sluttraport.toc)
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Sluttraport.toc)
 \tf@toc=\write3
 
 \openout3 = Sluttraport.toc
  [1] [2] (./Sluttraport.aux))
 
 Here is how much of LuaTeX's memory you used:
- 9924 strings out of 494483
+ 9923 strings out of 494483
  100000,383344 words of node,token memory allocated
  386 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 4 attribute, 49 glue_spec, 4 attribute_list, 1 write nodes
    avail lists: 1:1,2:77,3:15,4:24,5:76,6:1224,7:434,8:7,9:27,10:15,11:68
  14030 multiletter control sequences out of 65536+600000
- 41 fonts using 6225435 bytes
- 39i,6n,31p,408b,229s stack positions out of 5000i,500n,10000p,200000b,100000s
-<c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on Sluttraport.pdf (3 pages, 16453 bytes).
+ 41 fonts using 7089231 bytes
+ 39i,6n,31p,362b,229s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2017/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf>
+Output written on Sluttraport.pdf (3 pages, 16446 bytes).
 
 PDF statistics: 35 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

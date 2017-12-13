@@ -1,0 +1,167 @@
+import React from 'react'
+import {shallow, mount} from 'enzyme'
+import {EditProfile} from './editprofile.jsx'
+import toJson from 'enzyme-to-json'
+import { Provider } from 'react-redux';
+
+describe('<EditProfile/>', () => {
+
+  const exps = [{description: 'test', end: '2017-08', start: '2017-01', favourite: false, jobTitle: 'test', subtype: '', title: 'test', type: 'Work' },
+  {description: 'test', end: '', start: '2017-01', favourite: false, jobTitle: 'test', subtype: '', title: 'test', type: 'Education' }   ]
+
+  const la = [{id: 1, title: 'Norwegian'}, {id: 2, title: 'English'}]
+  let testFunc = jest.fn()
+  let component = null
+
+  const store = {
+    state: {languages: la},
+    getState: testFunc,
+    subscribe: testFunc,
+    dispatch: testFunc
+  }
+
+  const props = {
+    languages: la,
+    experiences: exps,
+    experience: 'test',
+    getProfileFromPdf: testFunc,
+    saveProfile: testFunc,
+    setupDone: false,
+    dirty: true,
+    birthday: '1990-2-22',
+    zip: '5054',
+    webpage: 'foo.bar',
+    currentRole: 'student',
+    motto: 'bar',
+    phone: '112',
+    region: 'Hordaland',
+    driversLicense: 'yes?',
+    salary: 'enough',
+    availability: 'yes?',
+    country: 'Norway'
+  }
+
+  beforeEach(() => {
+    component = shallow(<EditProfile {...props} />)
+  })
+
+  it('renders', () => {
+    expect(toJson(component)).toMatchSnapshot()
+  })
+
+  it('changes props', () => {
+    component.setProps({birthday: '0001-01-01'})
+    component.setProps({experience: 'test1'})
+    component.setProps({birthday: '--'})
+    component.setState({dirty: true})
+    component.setProps({experience: 'test2'})
+    expect(toJson(component)).toMatchSnapshot()
+  })
+
+  it('change webpage', () => {
+    component.find('#webpage').simulate('change', {target: { value: 'www.1234' } })
+    expect(component.state().webpage).toBe('www.1234')
+  })
+
+  it('change currentRole', () => {
+    component.find('#currentRole').simulate('change', {target: { value: 'testRole' } })
+    expect(component.state().currentRole).toBe('testRole')
+  })
+
+  it('change motto', () => {
+    component.find('#motto').simulate('change', {target: { value: 'testmotto' } })
+    expect(component.state().motto).toBe('testmotto')
+  })
+
+  it('change experience', () => {
+    component.find('#experienceSummary').simulate('change', {target: { value: 'lots of experience'} })
+    expect(component.state().experience).toBe('lots of experience')
+  })
+
+  it('change zip', () => {
+    component.find('#zip').simulate('change', {target: { value: '5730' } })
+    expect(component.state().zip).toBe('5730')
+  })
+
+  it('change country', () => {
+    component.find('CountryDropDown').simulate('change', {target: { value: 'Sverige' } })
+    expect(component.state().country).toBe('Sverige')
+  })
+
+  it('change phone number', () => {
+    component.find('#phone').simulate('change', {target: { value: '113' } })
+    expect(component.state().phone).toBe('113')
+  })
+
+  it('change day', () => {
+    component.find('#birthdayDay').simulate('change', {target: { value: '22' } })
+    expect(component.state().day).toBe('22')
+  })
+
+  it('change month', () => {
+    component.find('#birthdayMonth').simulate('change', {target: { value: '07' } })
+    expect(component.state().month).toBe('07')
+  })
+
+  it('change year', () => {
+    component.find('#birthdayYear').simulate('change', {target: { value: '1993' } })
+    expect(component.state().year).toBe('1993')
+  })
+
+  it('change driversLicence', () => {
+    component.find('#driversLicense').simulate('change', {target: { value: 'true' } })
+    expect(component.state().driversLicense).toBe(true)
+  })
+
+  it('change availability', () => {
+    component.find('#availability').simulate('change', {target: { value: 'yes' } })
+    expect(component.state().availability).toBe('yes')
+  })
+
+  it('change expected salary', () => {
+    component.find('#salary').simulate('change', {target: { value: 'a lot' } })
+    expect(component.state().salary).toBe('a lot')
+  })
+
+  it('toggle edit', () => {
+    component.setState({edit: false})
+    component.instance().toggleEdit()
+    expect(component.state().edit).toBe(true)
+  })
+
+  /* it('save button', () => {
+    component = mount(<Provider store={store} ><EditProfile {...props} /></Provider>)
+    component.find('#save').simulate('click')
+    expect(testFunc).toBeCalled()
+  }) */
+
+  it('saveProfile()', () => {
+    let profile = component.instance().saveProfile()
+    expect(profile.zip).toEqual(props.zip)
+    expect(profile.webpage).toEqual(props.webpage)
+    expect(profile.currentRole).toEqual(props.currentRole)
+    expect(profile.motto).toEqual(props.motto)
+    expect(profile.experience).toEqual(props.experience)
+    expect(profile.birthday).toEqual(props.birthday)
+    expect(profile.phone).toEqual(props.phone)
+    expect(profile.driversLicense).toEqual(props.driversLicense)
+    expect(profile.salary).toEqual(props.salary)
+    expect(profile.availability).toEqual(props.availability)
+    expect(profile.country).toEqual(props.country)
+  })
+
+  it('setDirty()', () => {
+    expect(component.state().dirty).toBe(false)
+    component.instance().setDirty()
+    expect(component.state().dirty).toBe(true)
+  })
+
+  it('defaultHighlightExperiences()', () => {
+    component.instance().defaultHighlightExperiences(exps)
+    for (let i = 0; i < exps.length; i ++) {
+      expect(exps[i].favourite).toBe(true)
+      expect(exps[i].favouritePosition).toBe(i)
+    }
+  })
+
+})
