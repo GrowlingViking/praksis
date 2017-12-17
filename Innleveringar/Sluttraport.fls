@@ -1,6 +1,6 @@
-PWD C:/Users/Sigurd/Desktop/Praksis/Innleveringar
+PWD C:/Users/Sigurd/Desktop/praksis/Innleveringar
 INPUT c:/texlive/2017/texmf-var/web2c/luatex/lualatex.fmt
-INPUT ./Sluttraport.tex
+INPUT c:/Users/Sigurd/Desktop/praksis/Innleveringar/Sluttraport.tex
 OUTPUT Sluttraport.log
 INPUT c:/texlive/2017/texmf-dist/tex/luatex/lualibs/lualibs-basic.lua
 INPUT c:/texlive/2017/texmf-dist/tex/luatex/lualibs/lualibs-lua.lua
