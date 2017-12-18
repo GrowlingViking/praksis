@@ -127,6 +127,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
+INPUT ./images/WA.png
+INPUT ./images/WA.png
+INPUT images/WA.png
 OUTPUT Sluttraport.pdf
 INPUT ./Sluttraport.toc
 INPUT ./Sluttraport.toc
