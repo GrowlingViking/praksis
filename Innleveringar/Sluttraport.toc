@@ -1,4 +1,6 @@
 \contentsline {section}{\numberline {1}Intro}{2}
 \contentsline {section}{\numberline {2}Wide Assessment}{2}
 \contentsline {section}{\numberline {3}Arbeidsforhold}{3}
-\contentsline {section}{\numberline {4}Arbeidsoppgåver}{4}
+\contentsline {section}{\numberline {4}Arbeidsoppgåver og metodar}{4}
+\contentsline {section}{\numberline {5}Resultat}{5}
+\contentsline {section}{\numberline {6}Rolla i bedrifta}{5}
