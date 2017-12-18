@@ -1,10 +1,10 @@
-\contentsline {section}{\numberline {1}Intro}{2}
-\contentsline {section}{\numberline {2}Wide Assessment}{2}
-\contentsline {section}{\numberline {3}Arbeidsforhold}{3}
-\contentsline {section}{\numberline {4}Arbeidsoppgåver og metodar}{4}
-\contentsline {section}{\numberline {5}Resultat}{5}
-\contentsline {section}{\numberline {6}Rolla i bedrifta}{6}
-\contentsline {section}{\numberline {7}Relevans og læringsutbytte}{6}
-\contentsline {section}{\numberline {8}Fungert bra/dårleg}{7}
-\contentsline {section}{\numberline {9}Oppsummering}{7}
-\contentsline {section}{\numberline {10}Litt bilete frå kontoret}{8}
+\contentsline {section}{\numberline {1}Intro}{2}{section.1}
+\contentsline {section}{\numberline {2}Wide Assessment}{2}{section.2}
+\contentsline {section}{\numberline {3}Arbeidsforhold}{3}{section.3}
+\contentsline {section}{\numberline {4}Arbeidsoppgåver og metodar}{4}{section.4}
+\contentsline {section}{\numberline {5}Resultat}{5}{section.5}
+\contentsline {section}{\numberline {6}Rolla i bedrifta}{6}{section.6}
+\contentsline {section}{\numberline {7}Relevans og læringsutbytte}{6}{section.7}
+\contentsline {section}{\numberline {8}Fungert bra/dårleg}{7}{section.8}
+\contentsline {section}{\numberline {9}Oppsummering}{7}{section.9}
+\contentsline {section}{\numberline {10}Litt bilete frå kontoret}{8}{section.10}
