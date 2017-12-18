@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1513595367 "Sluttraport.tex" "Sluttraport.pdf" "Sluttraport" 1513595368
+["lualatex"] 1513596977 "Sluttraport.tex" "Sluttraport.pdf" "Sluttraport" 1513596979
   "/home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc" 1513595300 87231 3e16b029681c2efc6a7834b35d2a153c ""
   "/home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1513154042 134930 39413260d62d48331ee339c6fb405bda ""
   "/home/sigurd/.texlive2017/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1513154041 135890 76b458990dbb6ae2562761df5878d912 ""
@@ -101,10 +101,10 @@
   "/usr/local/texlive/2017/texmf-dist/tex/luatex/lualibs/lualibs-util-tpl.lua" 1480098845 7100 ccfb5023bc761673396964848d85b5e2 ""
   "/usr/local/texlive/2017/texmf-dist/tex/luatex/luaotfload/luaotfload-characters.lua" 1485820867 1548690 99578c3eff8b68cae3da45a4a7cbfcf2 ""
   "/usr/local/texlive/2017/texmf-var/web2c/luatex/lualatex.fmt" 1513151366 1348403 31238c935840c0c20f28f48877bedcf3 ""
-  "Sluttraport.aux" 1513595368 2550 0277112f6fb7f18ab603bee31feea1ab ""
-  "Sluttraport.out" 1513595368 520 5ca70cde0fae8a835e248c7746c4e721 ""
-  "Sluttraport.tex" 1513595366 11481 95b7171234ec42029daf2c15b424ebde ""
-  "Sluttraport.toc" 1513595368 720 f31235a4be2a2ce5afd8084fc0626d88 ""
+  "Sluttraport.aux" 1513596979 2550 0277112f6fb7f18ab603bee31feea1ab ""
+  "Sluttraport.out" 1513596979 520 5ca70cde0fae8a835e248c7746c4e721 ""
+  "Sluttraport.tex" 1513596976 11491 8290bedf4f91754f6523bb9c78990147 ""
+  "Sluttraport.toc" 1513596979 720 f31235a4be2a2ce5afd8084fc0626d88 ""
   "images/Studenter.jpg" 1513264723 34910 723737d1c56e3eb1022b07223aaec205 ""
   "images/WA.png" 1513594079 10707 c6df1948ffdff336ca195a867e4314f4 ""
   "images/coverage.png" 1513587098 185276 67ec82770db60f04815350e6a975b10a ""
@@ -112,10 +112,10 @@
   "images/test.png" 1513588591 244948 87e0f1f8126da61fa0a2267a15e660bd ""
   "images/workspace.jpg" 1513589558 4599997 028bc34ab7d5a0cabb74738ea1199422 ""
   (generated)
-  "Sluttraport.log"
-  "C:\Users\Sigurd\Desktop\praksis\Innleveringar\Sluttraport.log"
-  "Sluttraport.out"
   "Sluttraport.toc"
-  "Sluttraport.pdf"
+  "C:\Users\Sigurd\Desktop\praksis\Innleveringar\Sluttraport.log"
+  "Sluttraport.log"
+  "Sluttraport.out"
   "Sluttraport.aux"
   "C:\Users\Sigurd\Desktop\praksis\Innleveringar\Sluttraport.pdf"
+  "Sluttraport.pdf"
