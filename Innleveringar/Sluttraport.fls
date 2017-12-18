@@ -140,4 +140,10 @@ INPUT images/test.png
 INPUT ./images/coverage.png
 INPUT ./images/coverage.png
 INPUT images/coverage.png
+INPUT ./images/lunsj.jpg
+INPUT ./images/lunsj.jpg
+INPUT images/lunsj.jpg
+INPUT ./images/workspace.jpg
+INPUT ./images/workspace.jpg
+INPUT images/workspace.jpg
 INPUT ./Sluttraport.aux
