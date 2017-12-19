@@ -1,7 +1,7 @@
- Dag      Dato          |        Tidspunkt	|      Timar
-			|			|
-Torsdag 24.08.17	|	09.00 - 16.00	|	7t
+ Dag      Dato            Tidspunkt        Timar
+
 Fredag  25.08.17 	|	08.30 - 15.30 	|	7t
+Torsdag 24.08.17	|	09.00 - 16.00	|	7t
 Torsdag 31.08.17        |       08.00 - 15.00   |       7t
 Fredag  01.09.17	|	09.00 - 16.00 	| 	7t
 Torsdag 07.09.17	|	08.00 - 15.00 	| 	7t
